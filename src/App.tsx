@@ -8,9 +8,12 @@ import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 import Home from './pages/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
-import ListaTemas from './components/categorias/listaCategorias/ListaCategorias';
+import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
 import FormularioCategoria from './components/categorias/formularioCategorias/FormularioCategorias';
-import DeletarCategorias from './components/categorias/deletarCategoria/DeletarCategorias';
+import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategorias';
+import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
+import FormularioProdutos from './components/produtos/formularioProdutos/FormularioProdutos';
+import DeletarProdutos from './components/produtos/deletarProdutos/deletarProdutos';
 
 function App() {
   return (
@@ -24,10 +27,14 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/categorias" element={<ListaTemas />} />
+              <Route path="/categorias" element={<ListaCategorias />} />
               <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
               <Route path="/editarCartegoria/:id" element={<FormularioCategoria />} />
-              <Route path="/deletarCartegoria/:id" element={<DeletarCategorias />} />
+              <Route path="/deletarCartegoria/:id" element={<DeletarCategoria />} />
+              <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/cadastroProdutos" element={<FormularioProdutos />} />
+              <Route path="/editarProdutos/:id" element={<FormularioProdutos />} />
+              <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
             </Routes>
           </div>
           <Footer />
